@@ -5,15 +5,19 @@ const getWeather = position => {
     axios.get(url)
         .then( res => {
             console.log(res.data.name)
-            console.log(res.data.weather[0])
+            console.log(res.data)
         })
 }
 
-if ("geolocation" in navigator) {
-    navigator.geolocation.getCurrentPosition( getWeather, err => {
-        console.log("Could not retrieve location")
-    })
-} else {
-    console.log("rip geolocation")
+window.onload = () => {
+    if ("geolocation" in navigator) {
+        navigator.geolocation.getCurrentPosition( getWeather, err => {
+            console.log("Could not retrieve location")
+        })
+    } else {
+        console.log("rip geolocation")
+    }
 }
+
+
 
