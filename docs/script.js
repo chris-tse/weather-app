@@ -4,7 +4,8 @@ const getWeather = position => {
     let url = `https://fcc-weather-api.glitch.me/api/current?lat=${lat}&lon=${long}`
     axios.get(url)
         .then( res => {
-            document.getElementById("locname").innerText = res.data.name
+            let name = res.data.name
+            document.getElementById("locname").innerText = name
             console.log(res.data.name)
             console.log(res.data)
         })
