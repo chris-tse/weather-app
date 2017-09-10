@@ -28,8 +28,8 @@ Temporary Items
 .apdisk
 
 ### Sass ###
-**/.sass-cache/
-**/*.css.map
+.sass-cache/
+*.css.map
 
 ### VisualStudioCode ###
 .vscode/*
