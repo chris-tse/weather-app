@@ -1,4 +1,47 @@
+@import "mixins.sass"
+
+*
+    box-sizing: border-box
+
+.hidden
+    display: none
+
 body
     background: #30afea
-    color: white
+    color: #F9F7F8
+    font-family: Helvetica, Arial, sans-serif
 
+#app, #loading
+    max-width: 1200px
+    margin: 0 auto
+    text-align: center
+
+#app
+    #locname, #temp, #desc
+        font-size: 50px
+
+    #desc
+        margin-top: 30px
+
+    .wi
+        font-size: 100px
+
+    .btn
+        display: inline-block
+        padding: 15px 25px
+        margin-top: 25px
+        color: #F9F7F8
+        text-decoration: none
+        background: #9A9CA8
+
+.fadein
+    animation: fadein 1s
+
+
++keyframes(fadein)
+    0%
+        transform: translateY(50px)
+        opacity: 0
+    100%
+        transform: translateY(0)
+        opacity: 1
