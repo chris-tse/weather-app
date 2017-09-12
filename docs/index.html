@@ -4,13 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/weather-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Weather App</title>
 </head>
 <body>
-    <main id="app">
-        <h1 id="locname">-</h1>
-        <div id="icon"><img src="" alt=""></div>
+    <div id="loading">
+        <h1 class="fadein">Loading...</h1>
+    </div>
+    <main id="app" class="hidden">
+        <h1 id="locname"></h1>
+        <div id="icon-container"><i id="icon" class="wi"></i></div>
+        <div id="desc"></div>
         <div id="temp">-</div>
+        <a href="#" class="btn" onclick="toggleUnits()">Toggle Units</a>
 
     </main>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
