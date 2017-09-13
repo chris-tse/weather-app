@@ -46,7 +46,7 @@ function updateIcon(id) {
     switch(idArr[0]) {
         case '8':
             if (idArr[2] === '0') {
-                if (daytime){ 
+                if (daytime){
                     icon += '-sunny'
                     console.log("Sunny")
                 } else {
@@ -70,7 +70,9 @@ function updateIcon(id) {
             icon = 'wi-snow'
             break;
 
-
+        case '7':
+            icon = 'wi-fog'
+            break;
     }
     document.getElementById("icon").classList.add(icon)
 }
