@@ -46,10 +46,18 @@ function updateIcon(id) {
     switch(idArr[0]) {
         case '8':
             if (idArr[2] === '0') {
-                if (daytime) icon += '-sunny'
-                else icon += '-clear'
-                break;
+                if (daytime){ 
+                    icon += '-sunny'
+                    console.log("Sunny")
+                } else {
+                    icon += '-clear'
+                    console.log("Night")
+                }
             }
+            else {
+                icon += '-cloud'
+            }
+            break;
 
 
         case '2':
@@ -68,8 +76,7 @@ function updateIcon(id) {
 }
 
 function isDaytime() {
-    let d = new Date()
-    return d.getTime()/1000 < sunset
+    return (new Date).getHours() < 19
 }
 
 function toggleUnits() {
